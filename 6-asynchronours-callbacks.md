@@ -1,7 +1,7 @@
 # Asynchronous: More than one at a time. 
 + The the Javascript engine is synchronous, It executes code one line at a time.
-+ any events that happen outside of the engine get placed into a queue and if the execution stack is empty it will process the event.
-+ if a click event happens then an HTTP event it will process the click event first then run the function, complete it. Then look in the queue again for the next function (HTTP in this case
++ any events that happen outside of the engine get placed into a queue. If the execution stack is empty it will process the event.
++ If a click event happens a HTTP event it will process the click event first then run the function and complete it. Then look in the queue again for the next function (HTTP in this case).
 + What's happening is the browser is asynchronously putting things in the event queue, but the code that is running is still running line by line. 
 
 ## This long-running function shows how Javascript handles asynchronous callbacks.

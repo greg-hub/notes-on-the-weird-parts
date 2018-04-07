@@ -1,11 +1,11 @@
 # By Value vs By Reference 
 ```javascript 
-    b = a  //(or pass to a function) 
+    b = a  // (or pass to a function) 
 ``` 
 ### Value
-+ a is a primitive value 
++ a is a primitive value. 
 + b copy of a primitive value held in memory, this is called by value.
-+ they become the same by copying the var to two separate spots in memory
++ they become the same by copying the var to two separate spots in memory.
 
 ### for objects:
 + when a variable is set equal to an object it is still saved in memory for reference.
@@ -23,9 +23,8 @@
 console.log(a); // 3
 console.log(b) // 2
 ```
-+ These are two separate copies in memory. b is just a copy of a so the output here makes sense. 
-+ When a was changed it has its own space in memory so it's didn't have any impact on b when a was set to 2.
-
++ These are two separate copies in memory. __b__ is just a copy of __a__ so the output here makes sense. 
++ When __a__ was changed it has its own space in memory so it's didn't have any impact on __b__ when a was set to __2__.
 
 ### by reference (all object (including functions))
 ```javascript
@@ -39,9 +38,14 @@ console.log(d); //hello
 // Now you understand how this works the console logs above should not be supprising. As they are pointing to the same place in memory.
 ```
 
-
-### by reference (even as parameters objects are passed by refference)
+### by reference (even as parameters objects are passed by reference)
 ```javascript
+
+var c = { greeting: 'hi' };
+var d;
+d = c;
+
+c.greeting = 'hello';
 function changeGreeting(obj) {
 obj.greeting = 'hola'; // changed..
 }

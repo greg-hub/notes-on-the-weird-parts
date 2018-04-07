@@ -29,7 +29,7 @@ var a = 3 + 4;
 console.log (a); // 7 - the + operator is are special types of functions. it can be look at the same a writting an normal function
 ```
 #operators are fucntions.
-### OPERATOR PRECEDENCE: which operator function get called first(higher precedence wins) 
+### OPERATOR PRECEDENCE: which operator function gets called first (higher precedence wins) 
 
 ### ASSOCIATIVITY: What order the functions get called it. left to right or right to left.
 ```javascript
@@ -52,7 +52,7 @@ console.log(a); // 3 + 4 = 7 * 5 = 35
 var a = 1 + "2";
 console.log(a); //12  
 ```
-+ when you set a number and a string the engine is going to guess that you wanted 1 + 2 not a string so it coerced. This is due to it being dyno typed.
++ when you set a number and a string the engine is going to guess that you wanted 1 + 2 not a string so it coerced. This is due to it being dynamically typed.
 
 # Comparison operators
 ```javascript
@@ -67,22 +67,23 @@ function greet(name) {
     console.log(name);
     console.log('hello ' + name);
 }
-greet(); // hello undefined --  as a js don't care name was not set to a var. It created it and put it in the name space and set to undefined.
+greet(); // hello undefined --  as a JS doesn't care name was not set to a var. It created it and put it in the name space and set to undefined.
 ```
 # Objects and functions.
 ```javascript
+    var person = new Object();
     person["firstname"] = "Greg";
     person["lastname"] = "Clinton";
 
-    var firstnameProperty = "firstname"
+    var firstnameProperty = "firstname";
 
     console.log(person);
-    console.log(perosn[firstnameProperty]);
+    console.log(person[firstnameProperty]);
 
     console.log(person.lastname);
     console.log(person.firstname);
 
-    perosn.address = new object();
+    person.address = new Object();
     person.address.street = "111 main St.";
     person.address.state = "NY";
 
@@ -93,9 +94,9 @@ greet(); // hello undefined --  as a js don't care name was not set to a var. It
             // . operator is always the best way create objects.
 
         //objects and object literals
-    var person = { 
+    var Tony = { 
         firstname: 'Tony', 
-        lastname: 'Clinton'
+        lastname: 'Clinton',
         address: {
             street: '111 main st',
             city: 'NY'
@@ -117,20 +118,3 @@ greet(); // hello undefined --  as a js don't care name was not set to a var. It
     };
 ```            
 # Namespace: a container for vairables and functions: Typically to keep variables and functions with the same name sperate.
-```javascript
-
-    console.log(person)
-
-    // JSON and object literals 
-    var objectLiteral = {
-        firstname: 'Mary',
-        isAMary: true
-    }
-
-    console.log(JSON.stringify(objectliteral));
-
-    var jsonValue = JSON.parse(' { "firstname": "Mary",
-    "isAProgrammer": true }');
-
-    console.log(jsonValue);
-```
